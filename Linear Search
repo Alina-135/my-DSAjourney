@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() {
+    int n, i, target, count = 0;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n]; // declare after reading n
+    printf("Enter the elements: ");
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Enter number you want to search: ");
+    scanf("%d", &target);
+    for (i = 0; i < n; i++) {
+        if (target == arr[i]) {
+            printf("Element found at index: %d\n", i);
+            count++;
+        }
+    }
+
+    if (count > 0) {
+        printf("The element occurs %d times in the array.\n", count);
+    } else {
+        printf("The value is not found.\n");
+    }
+    return 0;
+}
