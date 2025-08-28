@@ -18,9 +18,9 @@ int main(){
     
     while(low<=high){
         mid=((low+high)/2);
+            count++;
         if(arr[mid]==target){
             printf("The elements is found at %d position. \n",mid);
-            count++;
             found=1;
             break;
         }
